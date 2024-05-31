@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Montserrat', sans-serif;
+}
+main{
+  background-color: #c9d6ff;
+  background: linear-gradient(to right, #ffffff, #d2d6e2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.container{
+  display: flex;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+  overflow: hidden;
+  width: 700px;
+  max-width: 100%;
+  min-height: 450px;
+}
+.container p{
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+.container span{
+  font-size: 12px;
+}
+.container a{
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+.container button{
+  background-color:  rgba(0, 28, 85, 1);
+  color: white;
+  font-size: 12px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: poiner;
+}
+.container button.hidden{
+  background-color: transparent;
+  border-color: #fff;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.container button.hidden a{
+  color: white;
+}
+.container button.hidden:hover, .container button.hidden:focus, .container button.hidden:active{
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  width: 50%;
+}
+form h1{
+  font-weight: 800;
+}
+.social-icons {
+ display: flex;
+ justify-content: center;
+ gap: 0.5em;
+}
+.icon{
+display: inline-flex;
+align-items: center;
+justify-content: center;
+height: 40px;
+width: 40px;
+padding: 5px;
+border-radius: 50%;
+background-color: rgba(0, 28, 85, 1);
+}
+.icon i{
+  font-size: 15px;
+  color: white;
+}
+
+.container input{
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+.welcome-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 46%;
+  background-color: rgba(0, 28, 85, 1);
+  border-top-right-radius: 7.8em;
+  border-bottom-right-radius: 5em;
+}
+.welcome-container h1{
+  color: white;
+}
+.welcome-container p{
+  color: white;
+  width: 80%;
+  text-align: center;
+}
+
+.sign-up-button{
+  margin-top: 1.5em;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.sign-up-button:hover, .sign-up-button:focus, .sign-up-button:active{
+  box-shadow: 0 0px 20px rgba(0,0,0,0.5);
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+
+@media screen and (max-width: 760px) {
+
+  main{
+    background-color: none;
+    background: none;
+    height: 100vh;
+  }
+
+  .container{
+    border-radius: none;
+    box-shadow: none;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-container{
+    width: 90%;
+    margin-bottom: 2em;
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 5em;
+    border-bottom-left-radius: 5em;
+  }
+
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    width: 100%;
+    
+  }
+}
