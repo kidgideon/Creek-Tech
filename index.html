@@ -22,13 +22,32 @@
   <body>
     <main>
       <div class="navbar">
-        <img src="images/CTM.png" alt="" />
-        <ul>
+        <img src="../images/CTM.png" alt="" />
+        <ul class="nav-list">
           <li><a href="#">Home</a></li>
           <li><a href="#">Classes</a></li>
           <li><a href="#">Contact us</a></li>
-          <button class="login-button"><a href="sign up.html">Login</a></button>
+          <button class="login-button">
+            <a href="../Log in page/log-in.html">Login</a>
+          </button>
         </ul>
+        <div class="menu-icon">
+          <button class="login-button-mobile-menu">
+            <a href="../Log in page/log-in.html">Login</a>
+          </button>
+          <i onclick="popUp()" class="fa-solid fa-bars"></i>
+          <div class="popup">
+            <ul class="nav-list-mobile-menu">
+              <span><a href="#">Home</a><i class="fa-solid fa-house"></i></span>
+              <span
+                ><a href="#">Classes</a> <i class="fa-solid fa-landmark"></i
+              ></span>
+              <span
+                ><a href="#">Contact us</a><i class="fa-solid fa-phone"></i
+              ></span>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
     <!-- first div on the page -->
@@ -62,20 +81,20 @@
         </div>
       </div>
       <div class="intro-image">
-        <img src="images/undraw_push_notifications_re_t84m.svg" alt="" />
+        <img src="../images/undraw_push_notifications_re_t84m.svg" alt="" />
       </div>
     </div>
 
     <div class="info-box">
       <div class="attend-box">
         <div class="attend-image">
-          <img src="images/undraw_time_management_re_tk5w.svg" alt="" />
+          <img src="../images/undraw_time_management_re_tk5w.svg" alt="" />
         </div>
 
         <div class="box-info">
           <section class="info-box-section">Live class</section>
           <p>
-            Class details, agenda, materials, and instructions – all you need to
+            Class details, agenda, materials, and instructions all you need to
             join seamlessly. Engage, learn, and connect effortlessly. Join us
           </p>
           <button class="button"><a href="">Attend class</a></button>
@@ -84,7 +103,7 @@
 
       <div class="enquiry-box">
         <div class="info-image">
-          <img src="images/undraw_educator_re_ju47.svg" alt="" />
+          <img src="../images/undraw_educator_re_ju47.svg" alt="" />
         </div>
         <div class="box-info">
           <section class="info-box-section">
@@ -97,7 +116,7 @@
 
       <div class="communication">
         <div class="comm-image">
-          <img src="images/undraw_typing_re_d4sq.svg" alt="" />
+          <img src="../images/undraw_typing_re_d4sq.svg" alt="" />
         </div>
         <div class="box-info">
           <section class="info-box-section">Chat with lecturer</section>
@@ -137,5 +156,17 @@
       </div>
     </footer>
     <div></div>
+    <script>
+      //animations
+      const popup = document.querySelector(".nav-list-mobile-menu");
+
+      const popUp = () => {
+        if (popup.classList.contains("show-now")) {
+          popup.classList.remove("show-now");
+        } else {
+          popup.classList.add("show-now");
+        }
+      };
+    </script>
   </body>
 </html>
