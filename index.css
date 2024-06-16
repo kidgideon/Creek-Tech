@@ -31,11 +31,14 @@ main{
   width: 95%;
   margin: auto;
 }
+ .menu-icon{
+  display: none;
+ }
 .navbar img{
   width: 10%;
   cursor: pointer;
 }
-.navbar ul{
+.nav-list{
   display: flex;
   align-items: center;
   list-style: none;
@@ -53,6 +56,82 @@ font-family: sans-serif;
 }
 .navbar a:hover{
   color: red;
+}
+.nav-list-mobile-menu{
+  background-color:  rgb(0,28,85);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 13px;
+ position: absolute;
+ top: 30px;
+ right: 0.1em;
+ opacity: 2%;
+ width: 170px;
+ box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+ transition: height 0.5s;
+ visibility: hidden;
+ color: transparent;
+}
+
+ .show-now {
+  display: block;
+  background-color:  rgb(0,28,85);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 210px;
+ position: absolute;
+ opacity: 100%;
+ top: 30px;
+ right: 0.1em;
+ z-index: 40px;
+ width: 170px;
+ box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+ visibility: visible;
+
+ 
+ }
+.nav-list-mobile-menu a{
+  color: white;
+  font-size: 1em;
+
+}
+.nav-list-mobile-menu span{
+  background-color: rgb(99, 99, 226);
+  border-radius: 5px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3em;
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px ;
+  padding-left: 20px;
+  
+}
+.nav-list-mobile-menu i{
+  color: rgb(219, 213, 213);
+}
+
+.login-button-mobile-menu{
+width: 6em;
+border: none;
+background-color: red;
+height: 2.1em;
+border-radius: 1em;
+margin-bottom: 1em;
+}
+.login-button-mobile-menu a{
+  color: white;
+ 
 }
 
 .login-button{
@@ -273,9 +352,26 @@ footer{
   margin: 0px 5px;
 }
 @media screen and (max-width: 760px) {
+    
   main{
-   display: none;
+    margin: auto;
   }
+  .navbar{
+    width: 90%;
+    height: 2.5em;
+  }
+    .nav-list {
+    display: none;
+   }
+
+ .menu-icon{
+  display: block;
+  position: relative;
+  margin-top: 1em;
+  color: white;
+  
+ }
+  
   html, body{
     max-width: 100%;
     overflow-x: hidden;
@@ -394,4 +490,7 @@ footer{
   }
   
 }
+
+
+
 
