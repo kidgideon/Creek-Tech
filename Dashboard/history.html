@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="main.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Font Awesome CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <!-- Simple styling for the button -->
+   
+   <title>Dashboard</title>
+</head>
+<body>
+
+   <!-- https://preview.keenthemes.com/keen/demo2/account/overview.html -->
+  
+   <div class="container">
+      <nav class="nav">
+         <ul>
+         <li>
+              <a href="#" class="logo">
+           <img src="../imageAssets/CTM.png" alt="">
+          </a>
+      </li>
+      <li><a class="link" href="dashboard.html">
+          <i class="fa-solid fa-menorah"></i>
+          <span class="nav-item">Dashboard</span>
+      </a>
+      </li>
+      
+      <li><a class="link" href="history.html">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span class="nav-item">History</span>
+      </a>
+      </li>
+       <div class="log-out">
+         
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <span >Log Out</span>
+        
+       </div>
+         </ul>      
+      </nav>
+  <section class="main">
+   <div class="nav-bar">
+      <i class="fa-solid fa-bell"><span class="notification-amount" onclick="openNotification()">10</span></i>
+      <div class="display-section">
+          <i class="fa-solid fa-bars" onclick="openNav()"></i>
+          <div class="nav-list-mobile-menu">
+  <div class="close-route">
+  <button onclick="openNav()">X</button>
+  </div>
+  <div class="list-item"><a href="dashboard.html">Dashboard</a></div>
+  <div class="list-item"><a href="">Logout</a></div>
+      </div>
+      </div>
+      <a class="profile-link" href="../Profile/Profile.html">
+          <i class="fa-solid fa-user"></i>
+      </a>
+       </div>
+  
+       <div class="notification-panel">
+         <div class="exit-route"><button  onclick="openNotification()">X</button></div>
+         <h2>Notifications</h2>
+         <div class="notifications">
+             <div class="notification">
+                 <div class="icon">
+                     <i class="fa-solid fa-gear"></i>
+                 </div>
+                 <span class="notification-body">
+                     <p>version one</p>
+         <span class="time-stamp">2 mins ago</span>
+                 </span>
+             </div>
+     
+             <div class="notification">
+                 <div class="icon">
+                     <i class="fa-solid fa-gear"></i>
+                 </div>
+                 <span class="notification-body">
+                     <p>version one</p>
+         <span class="time-stamp">2 mins ago</span>
+                 </span>
+             </div>
+         </div>
+     </div>
+
+    <div class="statistic-area">
+        <div class="statistic-box">
+            <h1>Weekly Statistics</h1>
+               <div class="statistic-circle-overlay">
+            <div class="stat">
+                20%
+            </div>
+               </div>
+        </div>
+        <div class="statistic-text">
+            <h1>statistics</h1>
+     <div class="statistic-measure">
+        <h3>today</h3> 
+        <div class="meausure">
+            <div class="percentage-1"></div>
+        </div>
+     </div>
+     <div class="statistic-measure">
+       <h3>week</h3>
+       <div class="meausure">
+        <div class="percentage-2"></div>
+       </div>
+     </div>
+     <div class="statistic-measure">
+        <h3>month</h3>
+        <div class="meausure">
+            <div class="percentage-3"></div>
+        </div>
+     </div>
+     <div class="statistic-measure">
+          <h3>semester</h3>
+          <div class="meausure">
+            <div class="percentage-4"></div>
+          </div>
+     </div>
+        </div>
+       </div>
+      </section>
+    <script src="../assets/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="profile.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+  <div class="close-button">
+    <a href="../Dashboard/dashboard.html"><button>X</button></a>
+ </div>
+ 
+    <div class="container">
+      <div class="top-section">
+        <div class="cover-photo"></div>
+        <div class="profile-photo"><img src="../imageAssets/Man.jpg" alt=""></div>
+        <h1 class="student-name">Jon Doe</h1>
+            </div>
+       <div class="page-demarkation">
+           <a href="Profile.html"><button>Overview</button></a>
+            <a href="Edit.html"><button>Settings</button></a>
+            <a href="Security.html"><button>Security</button></a>
+       </div>   
+         <div class="display-section">
+           <h2>Profile Details</h2>
+        <form action="#">
+          <label for="">Profile Image</label>
+          <input class="file-input" type="file" name="image" accept="image/*">
+           <label for="">Full name</label>
+           <input type="text" placeholder="surname">
+           <input type="text" placeholder="firstname">
+           <label for="">Matric Number</label>
+            <input type="text" placeholder="Matric number">
+       
+            <label for="">Phone number</label>
+             <input type="text" placeholder="phone no">
+       
+             <label for="">E Mail</label>
+              <input type="text" placeholder="E-mail">
+              <div class="buttons">
+               <button class="discard-button">discard</button>
+               <button class="submit-button" type="submit">save changes</button>
+              </div>
+        </form>
+               </div>
+         </div>
+    </div>
+</body>
+</html>
