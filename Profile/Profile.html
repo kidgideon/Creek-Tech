@@ -1,57 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="profile.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile page</title>
+   <link rel="stylesheet" href="profile.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Font Awesome CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <!-- Simple styling for the button -->
+   
+   <title>Profile</title>
 </head>
 <body>
-  <div class="close-button">
-    <a href="../Dashboard/dashboard.html"><button>X</button></a>
- </div>
- 
- 
-  <div class="container">
-    <div class="top-section">
-      <div class="cover-photo"></div>
-      <div class="profile-photo"><img src="../imageAssets/Man.jpg" alt=""></div>
-      <h1 class="student-name">Jon Doe</h1>
-          </div>
-     <div class="page-demarkation">
-         <a href="Profile.html"><button>Overview</button></a>
-          <a href="Edit.html"><button>Settings</button></a>
-          <a href="Security.html"><button>Security</button></a>
-     </div>   
-       <div class="display-section">
-         <div class="profile-top">
-             <h3>Profile Details</h3>
-             <a href="Edit.html"><button>Edit profile</button></a>
-             </div>
-             <div class="profile-details">
-             <div>
-                 <label>Full name</label>
-                 <p>John Doe</p>
-             </div>
-             
-             <div>
-                 <label>Matric Numner</label>
-                 <p>Fuo/21/csi/6666</p>
-             </div>
-             
-              <div>
-                   <label>E mail</label>
-                   <p>JohnDoe@gmail.com</p>
-              </div>
-             
-               <div>
-                 <label>phone number</label>
-                 <p>+234070456373828</p>
-               </div>
-             </div>
-             </div>
+   <!-- https://preview.keenthemes.com/keen/demo2/account/overview.html -->
+
+   <div class="container">
+      <nav class="nav">
+         <ul>
+         <li>
+              <a href="#" class="logo">
+           <img src="../imageAssets/CTM.png" alt="">
+          </a>
+      </li>
+      <li><a class="link" href="dashboard.html">
+          <i class="fa-solid fa-menorah"></i>
+          <span class="nav-item">Dashboard</span>
+      </a>
+      </li>
+      
+      <li><a class="link" href="history.html">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span class="nav-item">History</span>
+      </a>
+      </li>
+       <div class="log-out">
+         
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <span >Log Out</span>
+        
        </div>
+         </ul>      
+      </nav>
+         <section class="main">
+       <div class="nav-bar">
+          <i class="fa-solid fa-bell"><span class="notification-amount" onclick="openNotification()">10</span></i>
+          <div class="display-section">
+              <i class="fa-solid fa-bars" onclick="openNav()"></i>
+              <div class="nav-list-mobile-menu">
+      <div class="close-route">
+      <button onclick="openNav()">X</button>
+      </div>
+      <div class="list-item">
+        <i class="fa-solid fa-menorah"></i>
+        <a href="../Dashboard/dashboard.html">Dashboard</a>
+    </div>
+      <div class="list-item">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <a href="../Dashboard/history.html">History</a>
+      </div>
+      <div class="list-item">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <a href="#">Logout</a>
+      </div>
+          </div>
+          </div>
+           </div>
+        
+           <div class="notification-panel">
+            <div class="exit-route"><button  onclick="openNotification()">X</button></div>
+            <h2>Notifications</h2>
+            <div class="notifications">
+                <div class="notification">
+                    <div class="icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <span class="notification-body">
+                        <p>version one</p>
+            <span class="time-stamp">2 mins ago</span>
+                    </span>
+                </div>
+        
+                <div class="notification">
+                    <div class="icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <span class="notification-body">
+                        <p>version one</p>
+            <span class="time-stamp">2 mins ago</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+       <div class="top-section">
+   <div class="cover-photo"></div>
+   <div class="picture-body">
+      <div class="profile-picture"><img src="../imageAssets/Man.jpg" alt=""></div>
+      <div class="student-name">John Doe</div>
+   </div>
+</div>
+<div class="page-demarkation">
+    <a href="Profile.html"> <button>overview</button></a>
+    <a href="Edit.html"><button>Setting</button></a>
+</div>
+
+<div class="profile-details">
+<div class="profile-top">
+<h1>Profile Details</h1>
+<a href="Edit.html"><button>Edit Profile</button></a>
+</div>
+
+
+<div class="edit-item">
+<div for="">full name</div>
+<div class="item">John Doe</div>
+</div>
+<div class="edit-item">
+<div for="">Matric Number</div>
+<div class="item">Fuo/21/csi/14446</div>
+</div>
+
+<div class="edit-item">
+<div for="">Phone Number</div>
+<div class="item">0705444995353</div>
+</div>
+
+<div class="edit-item">
+<div for="">E Mail</div>
+<div class="item">JohnDoe@gmail.com</span>
+</div>
+</div>
+</div>
+
+  <div class="report-section">
+   <div class="outer-div">
+      <h1>Recent Classes</h1>
+      <button class="details-button">Details</button>
+      <div class="inner-div">Content 1</div>
+      <div class="inner-div">Content 2</div>
+      <div class="inner-div">Content 3</div>
+      <div class="inner-div">Content 4</div>
+      <div class="inner-div">Content 5</div>
+      <div class="inner-div">Content 6</div>
   </div>
-    
+   <div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Device</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>New York, USA</td>
+                <td class="status-ok">OK</td>
+                <td>Windows PC</td>
+                <td>2024-06-20 10:15 AM</td>
+            </tr>
+            <tr>
+                <td>London, UK</td>
+                <td class="status-err">ERR</td>
+                <td>iPhone 12</td>
+                <td>2024-06-21 12:30 PM</td>
+            </tr>
+            <tr>
+                <td>Tokyo, Japan</td>
+                <td class="status-ok">OK</td>
+                <td>MacBook Pro</td>
+                <td>2024-06-22 09:45 AM</td>
+            </tr>
+            <tr>
+                <td>Sydney, Australia</td>
+                <td class="status-err">ERR</td>
+                <td>Android Tablet</td>
+                <td>2024-06-23 07:50 AM</td>
+            </tr>
+
+            <tr>
+                <td>Sydney, Australia</td>
+                <td class="status-err">ERR</td>
+                <td>Android Tablet</td>
+                <td>2024-06-23 07:50 AM</td>
+            </tr>
+
+            <tr>
+                <td>London, UK</td>
+                <td class="status-err">ERR</td>
+                <td>iPhone 12</td>
+                <td>2024-06-21 12:30 PM</td>
+            </tr>
+            <tr>
+                <td>Tokyo, Japan</td>
+                <td class="status-ok">OK</td>
+                <td>MacBook Pro</td>
+                <td>2024-06-22 09:45 AM</td>
+            </tr>
+
+            <tr>
+                <td>Tokyo, Japan</td>
+                <td class="status-ok">OK</td>
+                <td>MacBook Pro</td>
+                <td>2024-06-22 09:45 AM</td>
+            </tr>
+
+            <tr>
+                <td>Tokyo, Japan</td>
+                <td class="status-ok">OK</td>
+                <td>MacBook Pro</td>
+                <td>2024-06-22 09:45 AM</td>
+            </tr>
+
+            <tr>
+                <td>Tokyo, Japan</td>
+                <td class="status-ok">OK</td>
+                <td>MacBook Pro</td>
+                <td>2024-06-22 09:45 AM</td>
+            </tr>
+
+            <tr>
+                <td>Tokyo, Japan</td>
+                <td class="status-ok">OK</td>
+                <td>MacBook Pro</td>
+                <td>2024-06-22 09:45 AM</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+ 
+   </div>
+  </div>
+          </section>
+    <script>
+
+const openNotification = () => {
+  const notificationPanel = document.querySelector(".notification-panel");
+      if (notificationPanel.classList.contains("opened")) {
+        notificationPanel.classList.remove("opened")
+      } else {
+        setTimeout(() => {
+          notificationPanel.classList.add("opened")
+        }, 55)
+      }
+ } 
+
+  const openNav = () => {
+    const notificationPanel = document.querySelector(".nav-list-mobile-menu");
+    if (notificationPanel.classList.contains("show-now")) {
+      setTimeout(() => {
+        notificationPanel.classList.remove("show-now")
+      }, 55)
+    } else {
+      setTimeout(() => {
+        notificationPanel.classList.add("show-now")
+      }, 55)
+    }
+  } 
+
+    </script>
 </body>
 </html>
+

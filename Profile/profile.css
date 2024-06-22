@@ -1,314 +1,792 @@
-  * {
-     padding: 0px;
-     margin: 0px;
-  }
- .container {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction:column;
- }
-  
-  body {
-    padding-bottom: 2em;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-   .top-section {
-    margin-top: 10px;
-     width: 98%;
-     height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ body {
+    background: linear-gradient(to right, #ffffff, #d2d6e2);
+ }
+
+ input::placeholder {
+    font-size: 80%;
+ }
+
+ nav {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 280px;
+    background-color: rgb(0,28,85);
+    overflow: hidden;
+    transition: 1s ;
+ }
+
+ .nav {
+   display: block;
+}
+ nav:hover {
+    width: 280px;
+    transition: 1s;
+ }
+
+ .logo {
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+    padding-bottom: 3rem;
+ }
+
+
+ .fa-solid {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 13px;
+    font-size: 20px;
+    text-align: center;
+ }
+
+ .logo span {
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 3px;
+ }
+
+ .logo img {
+    width: 60px;
+    height: 25px;
+ }
+
+ .link{
+    position: relative;
+    width: 280px;
+    font-size: 1.1em;
+    color: white;
+    display: table;
+    padding: 10px;
+    transition: 0.2s;
+ }
+
+ .display-section {
+   display: none;
+ }  
+
+ .nav-item {
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+ }
+
+ .link:hover {
+    background-color: white;
+    color: rgb(0,28,85);
+ }
+
+.log-out {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 1.2em;
+    margin-left: 1.5em;
+}
+
+.container {
+   display: flex;
+   width: 100%;
+}
+
+.main {
+   position: relative;
+   padding: 20px;
+   width: 100%;
+}
+
+
+.top-section {
+     width: 100%;
+     display: flex;
+     justify-content: start;
+     align-items: start;
+     flex-direction: column;
+     gap: 10px;
+     font-size: 150%;
+     font-weight: bold;
+     padding-bottom: 20px;
+     border-radius: 5px;
+}
+
+.picture-body {
      display: flex;
      justify-content: center;
      align-items: center;
      flex-direction: column;
-   }
- 
-   .cover-photo {
-    width: 99%;
-    height: 150px;
-    background: linear-gradient(to left, rgb(99, 99, 226), rgb(0, 28, 25));
-    border-radius: 10px;
- }
+     gap: 10px;
+     margin-left: 30px;
+}
 
-    .profile-photo {
-         width: 87%;
-         display: flex;
-         justify-content: start;
-    }
+.cover-photo {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(0,28,85);
+    border-radius: 5px;
+}
 
- .profile-photo img {
-     width: 150px;
-     height: 150px;
-     background-color: rgb(51, 49, 49);
+.profile-picture {
+     margin-top: -120px;
+     height: 159px;
+     width: 159px;
      border-radius: 100%;
-     margin-top: -100px;
-     border: 5px solid white;
- }
- 
- .top-section .student-name {
-     text-align: start;
-     width: 80%;
- }
+     background-color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
 
- .page-demarkation {
-    background-color: rgb(99, 99, 226);
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+     object-fit: cover;
+}
+
+.page-demarkation {
+    width: 100%;
+    background-color: rgb(0,28,85);
+    height: 50px;
     margin-top: 20px;
-    width: 99%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page-demarkation button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 100%;
+    transition: 1s;
+}
+
+.page-demarkation button:hover {
+    opacity: 50%;
+}
+
+.profile-details {
+    width: 100%;
+    border: 1px solid white;
+    background-color: white;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.1);
+}
+
+.profile-top {
+     width: 100%;
+     height: 50px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 5px; 
+
+}
+
+.profile-top button {
+    padding: 5px 14px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-area {
+     width: 100%;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-direction: column;
+}
+
+ 
+
+.edit-item {
+    width: 95%;
+    margin: 17px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    border-radius: 10px;
-    height: 30px;
- }
 
-  .page-demarkation button {
-     cursor: pointer;
-     padding: 3px 40px;
-     border-radius: 1px;
-     border: none;
-     background-color: transparent;
-     transition: 1.2s;
-     color: white;
-  }
-
- 
-    .display-section {
-         width: 95%;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;   
-    }
-
-    .file-input {
-      width: 100px;
-      height: 100px;
-      outline: auto;
-      image-rendering: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    
-   .profile-top {
-    margin-top: 10px;
-     width: 99%;
-     display: flex;
-     justify-content: space-between;
-     flex-direction: row;
-     align-items: center;
-     padding: 3px 10px;
-   }
-
-    .profile-top button {
-        border: none;
-        padding: 8px 25px;
-        background-color: red;
-        border-radius: 5px;
-        border-radius: 2px;
-        color: white;
-    }
-
-     .profile-details {
-         width: 95%;
-         flex-direction: column;
-     }
-
-.profile-details div {
-     width:30%;
-     margin: 20px 0px; 
 }
 
- .profile-details div label {
-     color: grey;
-     font-size: 18px;
+.edit-item div {
+    width: 50%;
+    text-align: start;
+}
+
+.item {
      font-weight: bold;
- }
+}
 
-  .profile-details div p {
-     font-size: 18px;
-     font-weight: bold;
-  }
+.edit-area-change {
+    width: 100%;
+}
 
-   form {
-    margin-top: 20px;
-     width: 97%;
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-   }
+.edit-section {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
 
-   form input {
-     margin: 10px 0px;
-     background-color: hsl(0, 0%, 89%);
-     border: none;
-     outline: none;
-     height: 30px;
-     color: black;
-     border-radius: 5px;
-     height: 50px;
-     padding: 0px 10px;
-   }
+.edit-section label {
+    width: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-weight: bold;
+}
 
-   form input::placeholder {
-    color: grey;
+.edit-section input {
+    background-color: rgb(223, 223, 223);
+    color: black;
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
     padding: 10px;
-   }
+}
 
-   h2 {
-     text-align: start;
-     width: 95%;
-     margin-top: 2.5em;
-   }
+.edit-section input::placeholder {
+     color: rgb(168, 168, 168);
+     margin: 10px;
+}
 
-   .buttons {
+.discard-div {
      width: 100%;
      display: flex;
-     justify-content: right;
+     justify-content: end;
      align-items: center;
+     flex-direction: row;
+}
+
+.discard-div button {
+    margin:20px;
+}
+
+.discard {
+     padding: 5px 10px;
+}
+
+.save-changes {
+    padding: 7px 13px;
+    background-color: red;
+    color: white;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }   
+
+  .profile-link {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(0,28,85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  } 
+
+   .fa-bell {
+      position: relative;
    }
 
-    .buttons button {
-         margin: 10px;
-         padding: 8px 20px;
-         border-radius: 5px;
-         border: none;
-         cursor: pointer;
+   .notification-amount {
+      position: absolute;
+       top: -7px;
+       left: 38px;
+       color: white;
+       background-color: red;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 20px;
+       font-size: 10px;
+       height: 20px;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+    .notification-panel {
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        width: 10px;
+        right: 0px;
+        transition: width 0.5s;
+        visibility: hidden;
+        z-index: 100px;
+    }
+    .notification-panel h2 {
+       padding: 0px 10px;
+       color: white;
     }
 
-     .submit-button {
-         background-color: red;
-         color: white;
+    .notifications {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       gap: 10px;
+    }
+
+    .notification {
+       width: 95%;
+       border: 1px solid rgb(161, 160, 160);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       height: 60px;
+       border-radius: 5px;
+       color: white;
+       flex-direction: row;
+       gap: 5px;
+       padding: 2px;
+    }
+
+     .icon {
+       width: 10%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: rgb(211, 210, 210);
+     }
+      
+      .notification-body {
+         width: 90%;
+      }
+
+     .time-stamp {
+      width: 100%;
+      text-align: end;
+      font-size: 11px;
+      color: rgb(197, 196, 196);
      }
 
-     .Security-summary {
-       width: 95%;
+    .opened {
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      width: 250px;
+      background-color: rgb(0,28,85);
+      right: 0px;
+      visibility: visible;
+      transition: width 0.5s;
+      z-index: 200;
+    }
+
+    .exit-route {
+       width: 100%;
        display: flex;
-       justify-content: space-evenly;
+       justify-content: end;
        align-items: center;
        flex-direction: row;
-       height: 100px;
-       margin-top: 40px;
+    }
+   
+    .exit-route button {
+       background-color: red;
+       color: white;
+       width: 40px;
+       height: 30px;
+    }
+   .profile-link i {
+       font-size: 13px;
+   }
+ 
+  .nav-list-mobile-menu{
+   background-color:  rgb(0,28,85);
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 13px;
+   position: absolute;
+   top: 30px;
+   right: 0.1em;
+   opacity: 2%;
+   width: 170px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+  transition: height 0.5s;
+  visibility: hidden;
+  color: transparent;
+ }
+ 
+  .close-route {
+   width: 100%;
+   display: flex;
+   justify-content: end;
+   align-items: center;
+  }
+
+  .close-route button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: button;
+  }
+
+  .show-now {
+   display: block;
+   background-color:  rgb(0,28,85);
+   border-radius: 5px;
+   height: 250px;
+   position: absolute;
+   opacity: 100%;
+   top: 58px;
+   right: 0.1em;
+   z-index: 70px;
+   width: 170px;
+   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+   visibility: visible;
+   color: white;
+  }
+
+   .list-item {
+       width: 100%;
+       text-align: center;
+       height: 20px;
+       background-color: blue;
+       display: flex;
+       justify-content: start;
+       align-items: center;
+       height: 49px;
+       margin: 10px 0px;
+       color: white;
+   }
+
+   .list-item a {
+       color: white;
+   }
+
+   .report-section {
+     margin-top: 20px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-direction: row;
+   }
+
+   .outer-div {
+    width: 23%;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.outer-div::-webkit-scrollbar {
+    display: none;
+}
+
+.outer-div h1 {
+    margin-bottom: 10px;
+}
+
+.details-button {
+     padding: 10px 17px;
+     margin-bottom: 10px;
+     cursor: pointer;
+}
+
+.inner-div {
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.table-container {
+    width: 95%;
+    height: 400px;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto;
+     overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+ .table-container::-webkit-scrollbar {
+     display: none;
+ }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.status-ok {
+    color: green;
+    font-weight: bold;
+}
+.status-err {
+    color: red;
+    font-weight: bold;
+}
+
+.second-container {
+    text-align: center;
+    margin-top: 50px;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.edit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+.edit-button i {
+    color: black;
+}
+.remove-button {
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.button-group button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 80%;
+}
+.discard-button {
+    background-color: #d9534f;
+    color: white;
+}
+.save-button {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.button-area {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.change-password-button {
+    background-color: #0275d8;
+    color: white;
+    margin-top: 10px;
+    width: 30%;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 80%;
+}
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+}
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup-header h2 {
+    margin: 0;
+}
+.popup-close {
+    cursor: pointer;
+}
+.popup-group {
+    margin-bottom: 15px;
+}
+.popup-group input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.popup-button-group {
+    display: flex;
+    justify-content: space-between;
+}
+.popup-button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.popup-save-button {
+    background-color: #5cb85c;
+    color: white;
+}
+.popup-close-button {
+    background-color: #d9534f;
+    color: white;
+}
+
+  @media screen and (max-width: 769px) and (min-width: 0px) {
+     .nav {
+         display: none;
      }
 
-      .box {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-         width: 150px;
-         border: 1px solid rgb(207, 207, 207);
-         height: 80px;
-         padding: 5px 25px;
-         border-radius: 5px;
+     .display-section {
+        display: block;
+   }
+
+  }
+
+  @media screen and (max-width: 1333px) and (min-width: 0px) {
+      body {
+        font-size: 80%;
       }
 
-     
-      .box p {
-        text-align: center;
+    .report-section {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 80%;
+     }
+
+     .outer-div {
+        width: 75%;
+     }
+
+     .table-container {
         width: 100%;
-        height: 100%;
-        font-size: 25px;
-      }
+     }
 
-      .title-text {
-         display: flex;
-         justify-content: center;
-         align-items: end;
-      }
+     .profile-details {
+        font-size: 80%;
+     }
 
-      .sucessfull {
-        color: blue;
-      }
-      .failed {
-         color: red;
-      }
-      .login-sessions {
-         width: 95%;
-         padding-bottom: 1.2em;
-         padding-top: 20px;
-         border-radius: 10px;
-         padding-left: 5px;
-         padding-right: 5px;
-         background-color: white;
-      }
-
-      .grid-direction {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 10px;
-        height: 40px;
-        border-bottom:  1px solid grey;
-      }
-
-      .grid-direction span {
-        width: 100%;
-        text-align: center;
-      }
-
-      .grid-direction-details {
-        color: grey;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 40px;
-        border-bottom:  1px solid grey;
-      }
-
-      .grid-direction-details span {
-        width: 100%;
-        text-align: center;
-      }
-
-      .ok {
-        background-color: rgb(52, 255, 52);
-        color: white;
-        padding: 4px;
-        font-weight: bold;
-      }
-
-      .err {
-        background-color: rgb(255, 88, 88);
-        color: white;
-        padding: 4px;
-        font-weight: bold;
-      }
-
-      .close-button {
-         position: fixed;
-         top: 2px;
-         left: 3px;
-      }
-      .close-button button {
-         background-color: black;
-         opacity: 60%;
-         padding: 10px 15px;
-         color: white;
+     .profile-picture {
+        margin-top: -75px;
+         height: 120px;
+         width: 120px;
          border-radius: 100%;
-      }
+     }
 
-      @media screen  and (max-width: 900px) and (min-width: 0px) {
-         .box {
-           width: 30%;
-           height: 40px;
-         }
+     .cover-photo {
+        height: 110px;
+     }
 
-      .box p {
-         font-size: 100%;
-      }
+     .profile-picture img {
+        width: 110px;
+        height: 110px;
+        border-radius: 100%;
+         object-fit: cover;
+    }
 
-      .page-demarkation button {
-         font-size: 10px;
-         padding: 0px;
-      }
+  .picture-edit-section {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+  }
+    
+  }
 
-      .login-sessions {
-        font-size: 13px;
-      }
-      }     
