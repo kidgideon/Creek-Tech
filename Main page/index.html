@@ -22,9 +22,8 @@
   <body>
     <main>
       <div class="navbar">
-        <img src="../images/CTM.png" alt="" />
+        <h1>C.T.M</h1>
         <ul class="nav-list">
-          <li><a href="#">Home</a></li>
           <li><a href="#">Classes</a></li>
           <li><a href="#">Contact us</a></li>
           <button class="login-button">
@@ -66,19 +65,19 @@
           </h4>
           <div class="timing-section">
             <div class="sec-sec">
-              <span class="num-section">41</span>
+              <span class="num-section" id="days">41</span>
               <span class="days-section">Days</span>
             </div>
             <div class="sec-sec">
-              <span class="num-section">23</span>
+              <span class="num-section" id="hours">23</span>
               <span class="days-section">Hours</span>
             </div>
             <div class="sec-sec">
-              <span class="num-section">35</span>
+              <span class="num-section" id="minutes">35</span>
               <span class="days-section">Minutes</span>
             </div>
             <div class="sec-sec">
-              <span class="num-section">30</span>
+              <span class="num-section" id="seconds">30</span>
               <span class="days-section">Seconds</span>
             </div>
           </div>
@@ -101,7 +100,6 @@
             Class details, agenda, materials, and instructions all you need to
             join seamlessly. Engage, learn, and connect effortlessly. Join us
           </p>
-          <button class="button"><a href="">Attend class</a></button>
         </div>
       </div>
 
@@ -114,7 +112,6 @@
             Find available lecture rooms
           </section>
           <p>Find out the various lecture rooms available</p>
-          <button class="button"><a href="">Lecture rooms</a></button>
         </div>
       </div>
 
@@ -128,7 +125,6 @@
             Here, you can easily connect with your lecturer to ask questions,
             seek clarification, or discuss course-related matters.
           </p>
-          <button class="button"><a href="">Chat</a></button>
         </div>
       </div>
     </div>
@@ -144,8 +140,6 @@
         </div>
         <div class="footernav">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">News</a></li>
             <li><a href="">Contact us</a></li>
             <li><a href="">About us</a></li>
             <li><a href="">Our team</a></li>
@@ -170,6 +164,39 @@
         } else {
           popup.classList.add("show-now");
         }
+      };
+    </script>
+
+    <script>
+      function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function updateNumber(element, min, max) {
+        let value = parseInt(element.innerText);
+        value += getRandomNumber(-1, 1); // Increment or decrement randomly
+        if (value < min) value = min;
+        if (value > max) value = max;
+        element.innerText = value;
+      }
+
+      window.onload = function () {
+        const daysElement = document.getElementById("days");
+        const hoursElement = document.getElementById("hours");
+        const minutesElement = document.getElementById("minutes");
+        const secondsElement = document.getElementById("seconds");
+
+        daysElement.innerText = getRandomNumber(1, 99);
+        hoursElement.innerText = getRandomNumber(0, 23);
+        minutesElement.innerText = getRandomNumber(0, 59);
+        secondsElement.innerText = getRandomNumber(0, 59);
+
+        setInterval(() => {
+          updateNumber(daysElement, 1, 99);
+          updateNumber(hoursElement, 0, 23);
+          updateNumber(minutesElement, 0, 59);
+          updateNumber(secondsElement, 0, 59);
+        }, 1000); // Update every second
       };
     </script>
   </body>

@@ -8,8 +8,7 @@
 }
 
 main{
-  background-color: #c9d6ff;
-  background: linear-gradient(to right, #ffffff, #d2d6e2);
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,11 +20,13 @@ main{
   display: flex;
   background-color: #fff;
   border-radius: 30px;
+  border-bottom-left-radius: 5em;
   box-shadow: 0 5px 15px rgba(0,0,0,0.35);
   overflow: hidden;
   width: 700px;
   max-width: 100%;
   min-height: 450px;
+  border: 1px solid rgb(206, 202, 202);
 }
 .container p{
   font-size: 14px;
@@ -43,7 +44,7 @@ main{
   margin: 15px 0 10px;
 }
 .container button{
-  background-color:  rgba(0, 28, 85, 1);
+  background-color:  black;
   color: white;
   font-size: 12px;
   padding: 10px 45px;
@@ -83,7 +84,7 @@ main{
   overflow: hidden;
   }
   .home-icon i{
-    color: rgba(0, 28, 85, 1);
+    color: black;
     font-size: 25px;
 
   }
@@ -125,9 +126,11 @@ main{
   align-items: center;
   justify-content: center;
   width: 46%;
-  background-color: rgba(0, 28, 85, 1);
+  background-color: black;
   border-top-right-radius: 7.8em;
   border-bottom-right-radius: 5em;
+  border-bottom-left-radius: 5em;
+  border: 10px solid #004E98;
 }
 .welcome-container h1{
   color: white;
@@ -182,7 +185,7 @@ margin-top: 5em;
  display: flex;
 }
 footer{
-  background-color: rgb(0, 22, 66);
+  background-color: black;
   padding: 20px;
   text-align: center;
  position: fixed;
@@ -195,6 +198,7 @@ footer p{
 }
 
 @media screen and (max-width: 360px) and (min-width: 200px) {
+
 
   .welcome-container h1{
     font-size: 1.8em;
@@ -209,17 +213,22 @@ font-size: 0.8em;
     height: 100%;
   }
   .home-icon{
-    margin-top: -1em;
+    margin-top: -1.2em;
     margin-bottom: 0.5em;
-    margin-left: -19.5em;
+    margin-left: -20.5em;
     background-color: white;
-    height: 4em;
-    width: 4em;
+    height: 3.8em;
+    width: 3.8em;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    }
+    .home-icon i{
+      color: black;
+      font-size: 20px;
+  
     }
   .container{
     border-radius: 0px;
@@ -231,6 +240,8 @@ font-size: 0.8em;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0px ;
+
   }
   .container input{
     background-color: #eee;
@@ -244,7 +255,7 @@ font-size: 0.8em;
 
   .welcome-container{
     width: 100%;
-    background-color: rgba(0, 28, 85, 1);
+    background-color: black;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 45%;
     border-bottom-left-radius: 45%;
@@ -284,11 +295,11 @@ font-size: 0.8em;
 
   }
   footer{
-    background-color: rgb(0, 22, 66);
+    background-color: black;
     padding: 20px;
     text-align: center;
    position: static;
-   margin-top: 4.2em;
+   margin-top: 4.6em;
    
   }
   
@@ -306,12 +317,16 @@ font-size: 0.8em;
 font-size: 0.8em;
   }
   .home-icon{
-    margin-top: -0.8em;
-    margin-bottom: 0.3em;
+    margin-top: -1.2em;
+    margin-bottom: 0.2em;
     margin-left: -20.7em;
     background-color: white;
-    height: 4em;
-    width: 4em;
+    height: 3.5em;
+    width: 3.5em;
+    }
+    .home-icon i{
+      font-size: 20px;
+  
     }
   .container{
     border-radius: 0px;
@@ -323,6 +338,8 @@ font-size: 0.8em;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0px;
+
   }
   .container input{
     background-color: #eee;
@@ -337,7 +354,7 @@ font-size: 0.8em;
 
   .welcome-container{
     width: 100%;
-    background-color: rgba(0, 28, 85, 1);
+    background-color: black;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 45%;
     border-bottom-left-radius: 45%;
@@ -377,7 +394,7 @@ font-size: 0.8em;
 
   }
   footer{
-    background-color: rgb(0, 22, 66);
+    background-color: black;
     padding: 20px;
     text-align: center;
    position: static;
@@ -398,13 +415,18 @@ font-size: 0.8em;
 font-size: 0.8em;
   }
   .home-icon{
-    margin-top: -0.7em;
+    margin-top: -1.2em;
     margin-bottom: 0.3em;
     margin-left: -20.9em;
     background-color: white;
-    height: 4em;
-    width: 4em;
+    height: 3em;
+    width: 3em;
     padding: 2.5em;
+    }
+    .home-icon i{
+      color: black;
+      font-size: 25px;
+  
     }
   .container{
     border-radius: 0px;
@@ -416,6 +438,7 @@ font-size: 0.8em;
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
   .container input{
     background-color: #eee;
@@ -430,7 +453,7 @@ font-size: 0.8em;
 
   .welcome-container{
     width: 100%;
-    background-color: rgba(0, 28, 85, 1);
+    background-color: black;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 45%;
     border-bottom-left-radius: 45%;
@@ -471,7 +494,7 @@ font-size: 0.8em;
   }
 
   footer{
-    background-color: rgb(0, 22, 66);
+    background-color: black;
     padding: 20px;
     text-align: center;
    position: static;
@@ -494,13 +517,18 @@ font-size: 0.8em;
 font-size: 1em;
   }
   .home-icon{
-    margin-top: -0.7em;
+    margin-top: -1em;
     margin-bottom: 0.3em;
     margin-left: -22.9em;
     background-color: white;
-    height: 4em;
-    width: 4em;
-    padding: 2.8em;
+    height: 2em;
+    width: 2em;
+    padding: 2.2em;
+    }
+    .home-icon i{
+      color: black;
+      font-size: 24px;
+  
     }
   .container{
     border-radius: 0px;
@@ -512,6 +540,8 @@ font-size: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
+      border: 0px;
+
   }
   .container input{
     background-color: #eee;
@@ -526,7 +556,7 @@ font-size: 1em;
 
   .welcome-container{
     width: 100%;
-    background-color: rgba(0, 28, 85, 1);
+    background-color: black;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 45%;
     border-bottom-left-radius: 45%;
@@ -561,17 +591,17 @@ font-size: 1em;
     font-weight: 400;
   }
   .sign-up-button{
-    margin-top: 4em;
+    margin-top: 6em;
     margin-bottom: 0em;
 
   }
 
   footer{
-    background-color: rgb(0, 22, 66);
+    background-color: black;
     padding: 20px;
     text-align: center;
    position: static;
-   margin-top: 7.7em;
+   margin-top: 6.3em;
    
   }
  
@@ -583,18 +613,19 @@ font-size: 1em;
     height: 100%;
   }
   .welcome-container h1{
-    font-size: 2em;
+    font-size: 3em;
   }
   .welcome-container p{
-font-size: 1em;
+font-size: 1.3em;
+line-height: 1.5em;
   }
   .home-icon{
     margin-top: -0.7em;
     margin-bottom: 0.3em;
-    margin-left: -40.7em;
+    margin-left: -45.7em;
     background-color: white;
-    height: 4em;
-    width: 4em;
+    height: 5em;
+    width: 5em;
     }
   .container{
     border-radius: 0px;
@@ -606,13 +637,15 @@ font-size: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
+      border: 0px;
+
   }
   .container input{
     background-color: #eee;
     border: none;
     margin: 5px 0;
     padding: 20px 20px;
-    font-size: 13px;
+    font-size: 20px;
     border-radius: 8em;
     width: 100%;
     margin-top: 2em;
@@ -620,7 +653,7 @@ font-size: 1em;
 
   .welcome-container{
     width: 100%;
-    background-color: rgba(0, 28, 85, 1);
+    background-color: black;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 45%;
     border-bottom-left-radius: 45%;
@@ -646,24 +679,24 @@ font-size: 1em;
   .form-header p{
     display: block;
     font-weight: 800;
-    font-size: 2.4em;
-    margin-top: 2em;
+    font-size: 4em;
+    margin-top: 2.1em;
   }
   .details p{
-    margin-top: 1em;
-    font-size: 1.2em;
+    margin-top: 2em;
+    font-size: 2.4em;
     font-weight: 400;
   }
   .sign-up-button{
-    margin-top: 3em;
+    margin-top: 4.5em;
     margin-bottom: 0em;
 
   }
   footer{
-    background-color: rgb(0, 22, 66);
+    background-color: black;
     padding: 20px;
     text-align: center;
    position: static;
-   margin-top: 2.4em;
+   margin-top: 4em;
   }
 }
