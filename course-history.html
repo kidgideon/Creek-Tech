@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Statistics</title>
+     <!-- Font Awesome CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <!-- Simple styling for the button -->
+     <style>
+      .layout {
+        margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.course-title {
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.statistics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.statistic-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 40px);
+    min-width: 200px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.percentage-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 25px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.percentage-fill {
+    background-color: #3498db;
+    height: 100%;
+    transition: width 0.5s;
+}
+
+.stat-value {
+    font-size: 24px;
+    color: #2C3E50;
+    margin: 10px 0 0;
+}
+
+@media (max-width: 768px) {
+    .statistic-item {
+        flex: 1 1 100%;
+    }
+}
+     </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+           <ul>
+           <li>
+                <a href="#" class="logo">
+             <img src="../imageAssets/CTM.png" alt="">
+            </a>
+        </li>
+        <li><a class="link" href="dashboard.html">
+            <i class="fa-solid fa-menorah"></i>
+            <span class="nav-item">Dashboard</span>
+        </a>
+        </li>
+        
+        <li><a class="link" href="history.html">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span class="nav-item">History</span>
+        </a>
+        </li>
+         <div class="log-out">
+           
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span >Log Out</span>
+          
+         </div>
+           </ul>      
+        </nav>
+
+        <div class="notification-panel">
+            <div class="exit-route"><button  onclick="openNotification()">X</button></div>
+            <h2>Notifications</h2>
+            <div class="notifications">
+                <div class="notification">
+                    <div class="icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <span class="notification-body">
+                        <p>version one</p>
+            <span class="time-stamp">2 mins ago</span>
+                    </span>
+                </div>
+        
+                <div class="notification">
+                    <div class="icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <span class="notification-body">
+                        <p>version one</p>
+            <span class="time-stamp">2 mins ago</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+           <section class="main">
+            <div class="nav-bar">
+                <i class="fa-solid fa-bell"><span class="notification-amount" onclick="openNotification()">10</span></i>
+                <div class="display-section">
+                    <i class="fa-solid fa-bars" onclick="openNav()"></i>
+                    <div class="nav-list-mobile-menu">
+            <div class="close-route">
+            <button onclick="openNav()">X</button>
+            </div>
+            <div class="list-item">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <a href="history.html">History</a>
+            </div>
+            <div class="list-item">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <a href="">Logout</a>
+            </div>
+                </div>
+                </div>
+                <a class="profile-link" href="../Profile/Profile.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                 </div>
+            <div class="layout">
+                <h1 class="course-title">Course Title: Advanced Mathematics</h1>
+                <div class="statistics">
+                    <div class="statistic-item">
+                        <canvas id="attendancePieChart"></canvas>
+                    </div>
+                    <div class="statistic-item">
+                        <h2>Attendance Percentage</h2>
+                        <div class="percentage-bar">
+                            <div class="percentage-fill" style="width: 85%;"></div>
+                        </div>
+                        <p>85% Attendance</p>
+                    </div>
+                    <div class="statistic-item">
+                        <h2>Total Classes</h2>
+                        <p class="stat-value">40</p>
+                    </div>
+                    <div class="statistic-item">
+                        <h2>Classes Attended</h2>
+                        <p class="stat-value">34</p>
+                    </div>
+                    <div class="statistic-item">
+                        <h2>Classes Missed</h2>
+                        <p class="stat-value">6</p>
+                    </div>
+                    <div class="statistic-item">
+                        <h2>Average Attendance Time</h2>
+                        <p class="stat-value">50 min</p>
+                    </div>
+                    <div class="statistic-item">
+                        <h2>Attendance Trend</h2>
+                        <canvas id="attendanceLineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        
+            </section>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const attendancePieCtx = document.getElementById('attendancePieChart').getContext('2d');
+    const attendancePieChart = new Chart(attendancePieCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Attended', 'Missed'],
+            datasets: [{
+                data: [85, 15],
+                backgroundColor: ['#3498db', '#ecf0f1'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+
+    const attendanceLineCtx = document.getElementById('attendanceLineChart').getContext('2d');
+    const attendanceLineChart = new Chart(attendanceLineCtx, {
+        type: 'line',
+        data: {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+            datasets: [{
+                label: 'Attendance',
+                data: [80, 85, 90, 70, 75, 85],
+                fill: false,
+                borderColor: '#3498db',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+});
+
+
+const openNotification = () => {
+  const notificationPanel = document.querySelector(".notification-panel");
+      if (notificationPanel.classList.contains("opened")) {
+        notificationPanel.classList.remove("opened")
+      } else {
+        setTimeout(() => {
+          notificationPanel.classList.add("opened")
+        }, 55)
+      }
+ } 
+
+  const openNav = () => {
+    const notificationPanel = document.querySelector(".nav-list-mobile-menu");
+    if (notificationPanel.classList.contains("show-now")) {
+      setTimeout(() => {
+        notificationPanel.classList.remove("show-now")
+      }, 55)
+    } else {
+      setTimeout(() => {
+        notificationPanel.classList.add("show-now")
+      }, 55)
+    }
+  } 
+
+  const removeClassesOnClick = () => {
+        document.body.addEventListener("click", (event) => {
+            const notificationPanel = document.querySelector(".notification-panel");
+            const navPanel = document.querySelector(".nav-list-mobile-menu");
+            
+            // Check if the click is outside of the panels
+            if (!event.target.closest(".notification-panel") && !event.target.closest(".nav-list-mobile-menu")) {
+                if (notificationPanel.classList.contains("opened")) {
+                    notificationPanel.classList.remove("opened");
+                }
+                if (navPanel.classList.contains("show-now")) {
+                    navPanel.classList.remove("show-now");
+                }
+            }
+        });
+    };
+
+
+</script>
+</body>
+</html>
