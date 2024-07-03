@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="profile.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Font Awesome CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <!-- Simple styling for the button -->
+   <title>Edit</title>
+</head>
+<body>
+   <!-- https://preview.keenthemes.com/keen/demo2/account/overview.html -->
+
+   <div class="container">
+      <nav class="nav">
+         <ul>
+         <li>
+              <a href="#" class="logo">
+          <h1>C. T. M</h1>
+          </a>
+      </li>
+      <li><a class="link" href="../Lecturer dashboard/Lecturer-dashboard.html">
+          <i class="fa-solid fa-menorah"></i>
+          <span class="nav-item">Dashboard</span>
+      </a>
+      </li>
+      
+      <li><a class="link" href="../Dashboard/history.html">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span class="nav-item">History</span>
+      </a>
+      </li>
+       <div class="log-out">
+         
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <span >Log Out</span>
+        
+       </div>
+         </ul>      
+      </nav>
+         <section class="main">
+       <div class="nav-bar">
+          <i class="fa-solid fa-bell"><span class="notification-amount" onclick="openNotification()">10</span></i>
+          <div class="display-section">
+              <i class="fa-solid fa-bars" onclick="openNav()"></i>
+              <div class="nav-list-mobile-menu">
+      <div class="close-route">
+      <button onclick="openNav()">X</button>
+      </div>
+      <div class="list-item">
+        <i class="fa-solid fa-menorah"></i>
+        <a href="../Dashboard/dashboard.html">Dashboard</a>
+    </div>
+      <div class="list-item">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <a href="../Dashboard/history.html">History</a>
+      </div>
+      <div class="list-item">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <a href="#">Logout</a>
+      </div>
+          </div>
+          </div>
+           </div>
+        
+           <div class="notification-panel">
+            <div class="exit-route"><button  onclick="openNotification()">X</button></div>
+            <h2>Notifications</h2>
+            <div class="notifications">
+                <div class="notification">
+                    <div class="icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <span class="notification-body">
+                        <p>version one</p>
+            <span class="time-stamp">2 mins ago</span>
+                    </span>
+                </div>
+        
+                <div class="notification">
+                    <div class="icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <span class="notification-body">
+                        <p>version one</p>
+            <span class="time-stamp">2 mins ago</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+       <div class="top-section">
+   <div class="cover-photo"></div>
+   <div class="picture-body">
+      <div class="profile-picture"><img src="../imageAssets/Man.jpg" alt=""></div>
+      <div class="student-name">John Doe</div>
+   </div>
+</div>
+<div class="page-demarkation">
+  <a href="Profile.html"> <button>overview</button></a>
+<a href="Edit.html"><button>Setting</button></a>
+</div>
+
+<div class="profile-details">
+<h3>Profile Details</h3>
+<div class="second-container">
+   <div class="image-container">
+       <img id="profileImage" src="https://picsum.photos/200" alt="Profile Picture">
+       <button class="edit-button" onclick="document.getElementById('imageInput').click();">
+           <i class="fas fa-pencil-alt"></i>
+       </button>
+   </div>
+   <input type="file" id="imageInput" style="display: none;" accept="image/*" onchange="updateImage(event)">
+   <div>
+       <button class="remove-button" onclick="removeImage()">Remove Picture</button>
+   </div>
+</div>
+
+<input type="file" id="imageInput" style="display: none;" accept="image/*" onchange="updateImage(event)">
+<div class="form-group">
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" placeholder="John doe">
+</div>
+<div class="form-group">
+    <label for="matricNumber">Matric Number</label>
+    <input type="text" id="matricNumber" placeholder="Fuo/21/csi/8890">
+</div>
+<div class="form-group">
+    <label for="phoneNumber">Phone Number</label>
+    <input type="text" id="phoneNumber" placeholder="+2340706763388">
+</div>
+ 
+<div class="button-area">
+   <button class="change-password-button" onclick="openPasswordPopup()">Change Password</button>
+</div>
+<div class="button-group">
+    <button class="discard-button" onclick="discardChanges()">Discard Changes</button>
+    <button class="save-button" onclick="saveChanges()">Save Changes</button>
+</div>
+
+</div>
+
+  <!-- Password Change Popup -->
+<div id="passwordPopup" class="popup">
+   <div class="popup-content">
+       <div class="popup-header">
+           <h2>Change Password</h2>
+           <span class="popup-close" onclick="closePasswordPopup()">&times;</span>
+       </div>
+       <div class="popup-group">
+           <label for="oldPassword">Old Password</label>
+           <input type="password" id="oldPassword" placeholder="Enter old password">
+       </div>
+       <div class="popup-group">
+           <label for="newPassword">New Password</label>
+           <input type="password" id="newPassword" placeholder="Enter new password">
+       </div>
+       <div class="popup-group">
+           <label for="confirmPassword">Confirm Password</label>
+           <input type="password" id="confirmPassword" placeholder="Confirm new password">
+       </div>
+       <div class="popup-button-group">
+           <button class="popup-save-button">Save Changes</button>
+           <button class="popup-close-button" onclick="closePasswordPopup()">Close</button>
+       </div>
+   </div>
+</div> 
+</div>
+
+</div>
+
+          </section>
+    <script>
+
+const openNotification = () => {
+  const notificationPanel = document.querySelector(".notification-panel");
+      if (notificationPanel.classList.contains("opened")) {
+        notificationPanel.classList.remove("opened")
+      } else {
+        setTimeout(() => {
+          notificationPanel.classList.add("opened")
+        }, 55)
+      }
+ } 
+
+  const openNav = () => {
+    const notificationPanel = document.querySelector(".nav-list-mobile-menu");
+    if (notificationPanel.classList.contains("show-now")) {
+      setTimeout(() => {
+        notificationPanel.classList.remove("show-now")
+      }, 55)
+    } else {
+      setTimeout(() => {
+        notificationPanel.classList.add("show-now")
+      }, 55)
+    }
+  } 
+
+  function updateImage(event) {
+        const image = document.getElementById('profileImage');
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                image.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function removeImage() {
+        const image = document.getElementById('profileImage');
+        image.src = 'https://picsum.photos/200';
+        document.getElementById('imageInput').value = '';
+    }
+
+    function openPasswordPopup() {
+        document.getElementById('passwordPopup').style.display = 'flex';
+    }
+
+    function closePasswordPopup() {
+        document.getElementById('passwordPopup').style.display = 'none';
+    }
+
+    const removeClassesOnClick = () => {
+        document.body.addEventListener("click", (event) => {
+            const notificationPanel = document.querySelector(".notification-panel");
+            const navPanel = document.querySelector(".nav-list-mobile-menu");
+            
+            // Check if the click is outside of the panels
+            if (!event.target.closest(".notification-panel") && !event.target.closest(".nav-list-mobile-menu")) {
+                if (notificationPanel.classList.contains("opened")) {
+                    notificationPanel.classList.remove("opened");
+                }
+                if (navPanel.classList.contains("show-now")) {
+                    navPanel.classList.remove("show-now");
+                }
+            }
+        });
+    };
+
+    removeClassesOnClick();
+    </script>
+</body>
+</html>
+

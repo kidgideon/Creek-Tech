@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../statistics/statistics.css" />
+  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="logo">
+              <h1>C.T.M</h1>
+            </a>
+          </li>
+          <li >
+            <a href="../Lecturer dashboard/Lecturer-dashboard.html" class="link">
+              <i class="fas fa-menorah"></i>
+              <span class="nav-item">Dashboard</span>
+            </a>
+          </li>
+       
+          <li>
+            <a href="#" class="link">
+              <i class="fa-solid fa-landmark"></i>
+              <span class="nav-item">Halls</span>
+            </a>
+          </li>
+         
+          <div class="log-out">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class>Log Out</span>
+          </div>
+        </ul>
+      </nav>
+
+      <section class="main">        
+        <div class="main-top">
+       <div class="main-top-nav">
+          <div><h4>Attendance</h4></div>
+       <div class="main-top-under"><span>Home</span>  <span>Account</span></div>
+       
+        </div>
+          <div class="main-top-ex">
+           
+          <a href="../lecturer-profile/Profile.html">          <i class="fa-solid fa-user"></i>
+          </a>
+          </div>
+        </div>
+
+        <section class="student-statistics">
+          <div class="statistics-heading">
+            <h2>Student Statistics</h2>
+            <div class="student-details">
+              <h3>Student Details</h3>
+              <ul>
+                <li><strong>Name:</strong> John Doe</li>
+                <li><strong>Student ID:</strong> 123456</li>
+                <li><strong>Program:</strong> Computer Science</li>
+                <li><strong>Email:</strong> john.doe@example.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="charts">
+            <div class="chart-container">
+              <canvas id="pieChart" width="400" height="400"></canvas>
+            </div>
+            <div class="chart-container">
+              <canvas id="barChart" width="400" height="400"></canvas>
+            </div>
+          </div>
+        </section>
+        
+        
+           
+   </div> 
+   
+      </section>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Sample data for pie chart
+  const pieChartData = {
+    labels: ['Present', 'Absent', 'Late'],
+    datasets: [{
+      label: 'Attendance Status',
+      data: [60, 25, 15],
+      backgroundColor: ['#36a2eb', '#ff6384', '#ffce56'],
+    }]
+  };
+
+  // Sample data for bar chart
+  const barChartData = {
+    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+    datasets: [{
+      label: 'Attendance per Week',
+      data: [80, 75, 85, 90, 70],
+      backgroundColor: '#4bc0c0',
+      borderColor: '#3cba9f',
+      borderWidth: 1
+    }]
+  };
+
+  // Initialize pie chart
+  var pieChart = new Chart(document.getElementById('pieChart'), {
+    type: 'pie',
+    data: pieChartData,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        tooltip: {
+          callbacks: {
+            label: function(tooltipItem) {
+              return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2) + '%';
+            }
+          }
+        }
+      }
+    }
+  });
+
+  // Initialize bar chart
+  var barChart = new Chart(document.getElementById('barChart'), {
+    type: 'bar',
+    data: barChartData,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        tooltip: {
+          callbacks: {
+            label: function(tooltipItem) {
+              return tooltipItem.dataset.label + ': ' + tooltipItem.raw;
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+     
+      
+ 
+    
+    
+
+
+  </body>
+</html>

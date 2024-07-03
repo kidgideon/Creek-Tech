@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance</title>
+  <link rel="stylesheet" href="../Courses page/courses.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <style>
+    /* CSS for hamburger menu */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+
+    /* Overlay for the mobile menu */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      display: none;
+    }
+
+    /* Menu items for the mobile menu */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 1500;
+      padding-top: 50px;
+    }
+
+    .menu.open {
+      transform: translateX(0);
+    }
+
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu ul li {
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation bar -->
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="logo">
+            <h1>C.T.M</h1>
+          </a>
+        </li>
+        <li>
+          <a href="../Lecturer dashboard/Lecturer-dashboard.html" class="link">
+            <i class="fas fa-menorah"></i>
+            <span class="nav-item">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="link">
+            <i class="fa-solid fa-landmark"></i>
+            <span class="nav-item">Halls</span>
+          </a>
+        </li>
+        <li class="log-out">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span class>Log Out</span>
+        </li>
+        <!-- Hamburger menu icon -->
+        <li class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main section -->
+    <section class="main">
+      <div class="main-top-nav">
+        <div><h4>Attendance</h4></div>
+     <div class="main-top-under"><span><a href="../Lecturer dashboard/Lecturer-dashboard.html">Home</a></span>  </div>
+      </div>
+      <div class="main-top">
+        <span>Hello! <br>
+          View the details of the various classes held and also check your attendance list here!</span>
+      </div>
+
+      <!-- Attendance section -->
+      <section class="Attendance">
+        <div class="attendance-list">
+          <div class="attendance-header">
+            <div><h1>Classes held</h1></div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>S/N</th>
+                <th>Course Title</th>
+                <th>Date</th>
+                <th>Start time</th>
+                <th>Attendance details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Mathematics</td>
+                <td>06-23-2024</td>
+                <td>8:00am</td>
+                <td><button><a href="../attendance/attendance.html">Attendance</a></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <!-- Overlay and mobile menu -->
+    <div class="overlay" id="overlay"></div>
+    <div class="menu" id="menu">
+      <ul>
+        <!-- Add your menu items here -->
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <!-- Add more items as needed -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.querySelector('.hamburger');
+      const menu = document.querySelector('.menu');
+      const overlay = document.querySelector('.overlay');
+
+      hamburger.addEventListener('click', function () {
+        menu.classList.toggle('open');
+        overlay.style.display = 'block';
+      });
+
+      overlay.addEventListener('click', function () {
+        menu.classList.remove('open');
+        overlay.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

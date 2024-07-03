@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
+}
+body{
+  background-color: #fff;
+}
+nav{
+position: sticky;
+top: 0;
+bottom: 0;
+height: 100vh;
+left: 0;
+width: 280px;
+background:  #fff; 
+border-right: 2px solid rgb(238, 236, 236);
+overflow: hidden;
+transition: 1s;
+}
+
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+.logo img{
+  width: 60px;
+  height: 25px;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  margin: 0.1px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+}
+.logo h1{
+  color:  #007BFF;
+  margin-left: 1em;
+}
+.hamburger{
+  display: none;
+}
+.link{
+  position: relaive;
+  width: 280px;
+  font-size: 0.9em;
+  color: black;
+  display: table;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.fa-solid, .fas, .fa-regular{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 13px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+.link:hover{
+  background: rgb(34, 137, 255);
+  color: #fff;
+  width: 16em;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+.log-out{
+  position: absolute;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ bottom: 0;
+ margin-left: 1.5em;
+ color: black;
+ gap: 1.2em;
+}
+
+
+
+.container{
+  display: flex;
+}
+.lecturer-dashboard{
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+  padding: 2em;
+  border-radius: 1.3em;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.15);
+  color: white;
+}
+.intro-caption{
+  width: 50%;
+}
+.intro-caption p{
+  font-size: 0.8em;
+}
+.intro-caption h1{
+  font-size: 2em;
+}
+.intro-image{
+  width: 50%;
+}
+.intro-image img{
+  width: 80%;
+  margin-top: -5em;
+  margin-bottom: -5em;
+}
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 40%;
+ 
+}
+.main-top-nav{
+  display: flex;
+  flex-direction: column;
+}
+.main-top-under{
+  display: flex;
+  font-size: 0.8em;
+  gap: 10px;
+}
+.main-top-under a{
+  color: rgb(155, 149, 149);
+}
+
+.main-top-ex{
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+.main-top i{
+  color: black;
+}
+
+
+/* Basic Styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Additional CSS for the form */
+.course-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 2em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.course-form h3 {
+  margin-bottom: 15px;
+}
+
+.course-form .form-group {
+  margin-bottom: 15px;
+}
+
+.course-form label {
+  display: block;
+  margin-bottom: 5px;
+  width: 30em;
+}
+
+.course-form input[type="text"],
+.course-form button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.course-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 8em;
+}
+
+.course-form button:hover {
+  background-color: #0f74e0;
+}
+
+
+.course-information-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-information {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-details h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.course-details button {
+  margin: 5px 0;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.course-details button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.course-details button:hover {
+  background-color: #007bff;
+}
+
+.notification-circle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.footerbottom{
+  display: none;
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  margin-top: 2em;
+  }
+  .footerbottom p{
+    color: white;
+    font-size: 0.8em;
+  }
+
+@media (max-width: 768px) {
+  nav{
+    display: none;
+  }
+    .main-top i{
+      font-size: 1em;
+      margin-right: -1.3em;
+    }
+    .main-top-ex{
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
+    .course-form {
+      width: 100%;
+    }
+    .course-form label {
+      width: 100%;
+    }
+    .course-information {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 20px;
+      flex-direction: column;
+    }
+    .users {
+      margin: auto;
+      width: 100%;
+    }
+    .footerbottom{
+      display: block;
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+      bottom: 0;
+      left: 0;
+      right: 0; 
+      margin-top: 2em;
+      }
+      .footerbottom p{
+        color: white;
+        font-size: 0.8em;
+      }
+}

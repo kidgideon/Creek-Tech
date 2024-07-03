@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  background-color: #fff;
+}
+nav {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 280px;
+  background: #fff;
+  border-right: 2px solid rgb(238, 236, 236);
+  overflow: hidden;
+  transition: 1s;
+}
+.logo {
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+.logo img {
+  width: 60px;
+  height: 25px;
+}
+.logo span {
+  font-weight: bold;
+  padding-left: 15px;
+  margin: 0.1px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+}
+.logo h1 {
+  color:  #007BFF;
+  margin-left: 1em;
+}
+.hamburger{
+  display: none;
+}
+.link {
+  position: relative;
+  width: 280px;
+  font-size: 0.9em;
+  color: black;
+  display: table;
+  padding: 10px;
+  transition: 0.5s;
+}
+.fa-solid, .fas, .fa-regular {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 13px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+.link:hover {
+  background: #007bff;
+  color: #fff;
+  width: 16em;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+.log-out {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  margin-left: 1.5em;
+  color: black;
+  gap: 1.2em;
+}
+.container {
+  display: flex;
+}
+.lecturer-dashboard {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+  padding: 2em;
+  border-radius: 1.3em;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.15);
+  color: white;
+}
+.intro-caption {
+  width: 50%;
+}
+.intro-caption p {
+  font-size: 0.8em;
+}
+.intro-caption h1 {
+  font-size: 2em;
+}
+.intro-image {
+  width: 50%;
+}
+.intro-image img {
+  width: 80%;
+  margin-top: -5em;
+  margin-bottom: -5em;
+}
+.main {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.main-top-nav {
+  display: flex;
+  flex-direction: column;
+}
+.main-top-under {
+  display: flex;
+  font-size: 0.8em;
+  gap: 10px;
+}
+.main-top-ex {
+  display: flex;
+  justify-content: end;
+}
+.main-top i {
+  color: black;
+}
+.second-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  animation: fadeInUp 1s ease-out, bounceIn 1s ease-out;
+}
+.second-main-one {
+  flex: 1;
+  text-align: center;
+}
+.second-main-one img {
+  max-width: 100%;
+}
+.second-main-two {
+  flex: 1;
+  padding: 20px;
+  opacity: 0; /* Start with opacity 0 for fade-in effect */
+  animation: fadeInUp 1s ease-out forwards; /* Apply fade-in animation */
+  margin-top: 5em;
+}
+.second-main-two h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.second-main-two p {
+  margin-bottom: 10px;
+  line-height: 1.8em;
+}
+.second-main-two ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.second-main-two-mobile {
+  display: none;
+  flex: 1;
+  padding: 20px;
+  opacity: 0; /* Start with opacity 0 for fade-in effect */
+  animation: fadeInUp 1s ease-out forwards; /* Apply fade-in animation */
+  margin-top: 5em;
+}
+.second-main-two-mobile h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.second-main-two-mobile p {
+  margin-bottom: 10px;
+}
+.second-main-two-mobile ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bounceIn {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+.course-generator {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.course-generator h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.footerbottom{
+  display: none;
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  margin-top: 2em;
+  }
+  .footerbottom p{
+    color: white;
+    font-size: 0.8em;
+  }
+
+/* Mobile view */
+@media (max-width: 768px) {
+  nav {
+  position: relative;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    border-right: none;
+   
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    list-style-type: none;
+  
+  }
+  nav ul.show {
+    display: flex;
+    margin-left: 7em;
+   
+  }
+  nav .show i{
+    font-size: 1em;
+  }
+  nav .logo {
+   display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .logo-mobile{
+margin-top: 1em;
+  }
+  .mobile-icons i{
+    font-size: 1em;
+    margin: -1em;
+    color: black;
+  }
+  .log-out {
+    position: static; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: none;
+    margin-right: -2em;
+    width: 50%;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    gap: 0;
+    background-color: black;
+    
+  }
+  .log-out span {
+    margin-top: -1.2em;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .main {
+    padding: 1.5em;
+  }
+  .lecturer-dashboard {
+    flex-direction: row;
+    margin: 1em 0;
+    gap: 0.5em;
+  }
+  .intro-caption,
+  .intro-image {
+    width: 100%;
+   
+  }
+  .intro-caption h1 {
+    font-size: 1.3em;
+  }
+  .intro-image img {
+    width: 100%;
+  }
+  .intro-image img {
+    width: 100%;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+  .main-top {
+ display: none;
+  }
+  .main-top-ex {
+    justify-content: center;
+  }
+  .second-main {
+    flex-direction: column;
+  }
+  .second-main-one,
+  .second-main-two {
+    width: 100%;
+   
+  }
+  .second-main-two {
+   display: none;
+  
+  }
+  .second-main-two-mobile {
+    display: block;
+    padding: 10px;
+    margin-top: 1em;
+    color: rgb(82, 79, 79);
+    line-height: 1.6em;
+  
+  }
+  .second-main-two-mobile h4{
+    text-align: center;
+    font-size: 1.2em;
+    color: black;
+  }
+  .footerbottom{
+    display: block;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    margin-top: 2em;
+    }
+    .footerbottom p{
+      color: white;
+      font-size: 0.8em;
+    }
+}

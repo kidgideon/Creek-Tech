@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
+}
+body{
+  background-color: #fff;
+}
+
+.hamburger {
+  display: flex;
+  cursor: pointer;
+}
+
+/* Overlay for the mobile menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+/* Menu items for the mobile menu */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1500;
+  padding-top: 50px;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+nav{
+position: sticky;
+top: 0;
+bottom: 0;
+height: 100vh;
+left: 0;
+width: 280px;
+background:  #fff; 
+border-right: 2px solid rgb(238, 236, 236);
+overflow: hidden;
+transition: 1s;
+}
+
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+.logo img{
+  width: 60px;
+  height: 25px;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  margin: 0.1px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+}
+.logo h1{
+  color:  #007BFF;
+  margin-left: 1em;
+}
+.link{
+  position: relaive;
+  width: 280px;
+  font-size: 1.1em;
+  color: black;
+  display: table;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.fa-solid, .fas, .fa-regular{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 13px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+  font-size: 0.82em;
+}
+.nav-item a{
+  display: flex;
+  color: black;
+}
+.link:hover{
+  background:  #007bff;
+  color: #fff;
+  width: 13em;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+.log-out{
+  position: absolute;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ bottom: 0;
+ margin-left: 1.5em;
+ color: black;
+ gap: 1.2em;
+}
+
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  margin-top: 0em;
+}
+.main-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background-color: black;
+margin-bottom: 3em;
+color: white;
+  width: 100%;
+  padding: 4em;
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+
+
+.main-top-nav{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4em;
+}
+.main-top-under{
+  display: flex;
+  font-size: 0.8em;
+  gap: 10px;
+}
+.main-top-under a{
+  color: rgb(155, 149, 149);
+}
+
+
+.attendance-header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+margin-top: 0.8em;
+}
+.attendance-header button{
+width: 100%;
+height: 2.2em;
+color: white;
+background-color: red;
+border-radius: 1.8em;
+padding-left: 1em;
+padding-right: 1em;
+border: none;
+}
+.attendance-header h1{
+font-size: 1.5em;
+opacity: 0.8;
+}
+.attendance-header button:hover{
+box-shadow: 0 5px 5px  rgba(0,0,0,0.3);
+
+
+}
+.attendance{
+  text-transform: capitalize;
+  overflow: hidden;
+  
+}
+.attendance-list{
+  width: 90%;
+padding: 2em;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgb(192, 186, 186);
+  box-shadow: 0 0px 5px rgba(0,0,0,0.2);
+  height: 100%;
+  overflow-y: auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  color: #fff;
+  background:   #007BFF;
+  text-align: left;
+  font-weight: bold;
+  width: 100%;
+}
+.table th, .table td{
+  padding: 12px 15px;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(even){
+  background: #f3f3f3;
+}
+.table tbody tr.active{
+font-weight: bold;
+color: #4ad489;
+}
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid rgb(75, 123, 219);
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgb(75, 123, 219);
+}
+.table button:hover{
+  background: rgb(75, 123, 219);
+  transition: 0.5s;
+
+}
+.table button a{
+  color: #004E98;
+  transition: 0.5s;
+}
+.table button a:hover{
+  color: #fff;
+}
+
+
+
+.container{
+  display: flex;
+}
+
+
+
+
+@media (max-width: 768px) {
+  nav{
+    display: none;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+}
+.main{
+  margin-top: 0em;
+}
+.main-top{
+font-size: 1em;
+  padding: 2em;
+ 
+}
+
+.attendance-header h1 {
+    font-size: 1rem;
+}
+
+.table th, .table td {
+    padding: 0.6rem;
+}
+
+.table button {
+    padding: 0.4rem 1rem;
+}
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.link {
+    width: 100%;
+    justify-content: center;
+}
+
+.log-out {
+    justify-content: center;
+}
+
+.main {
+    width: 100%;
+}
+
+.main-top {
+    width: 100%;
+}
+
+.attendance-list {
+    width: 100%;
+}
+
+.attendance-header {
+    flex-direction: column;
+}
+
+.attendance-header button {
+    width: auto;
+    margin-top: 1em;
+}
+
+.table {
+    font-size: 0.9em;
+}
+
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../Lecturer dashboard/lecturer-dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>C.T.M</h1>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="logo-mobile">
+            <h1>C.T.M</h1>
+          </div>
+        <div class="mobile-icons"> 
+          <a href="../Profile/Profile.html">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <i class="fa-solid fa-bars"></i></div>
+        </div>
+        <ul>
+          <li>
+            <a href="../Lecturer dashboard/Lecturer-dashboard.html" class="link">
+              <i class="fas fa-menorah"></i>
+              <span class="nav-item">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link">
+              <i class="fa-solid fa-landmark"></i>
+              <span class="nav-item">Halls</span>
+            </a>
+          </li>
+          <li>
+            <a href="../registration/registration.html" class="link">
+              <i class="fa-regular fa-registered"></i>
+              <span class="nav-item">Register courses</span>
+            </a>
+          </li>
+          <div class="log-out">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="nav-item">Log Out</span>
+          </div>
+        </ul>
+      </nav>
+      <section class="main">
+        <div class="main-top">
+          <div class="main-top-nav">
+            <div><h4>Attendance</h4></div>
+            <div class="main-top-under"><span>Home</span><span>Account</span></div>
+          </div>
+          <div class="main-top-ex">
+            <a href="../user/Profile.html">
+              <i class="fa-solid fa-user"></i>
+            </a>
+          </div>
+        </div>
+        <div class="lecturer-dashboard">
+          <div class="intro-caption">
+            <h1>Hi, Lecturer</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta</p>
+          </div>
+          <div class="intro-image">
+            <img src="../images/undraw_spreadsheet_re_cn18.svg" alt="" />
+          </div>
+        </div>
+        <div class="second-main">
+          <div class="second-main-one">
+            <img src="../images/undraw_questions_re_1fy7.svg" alt="">
+          </div>
+          <div class="second-main-two">
+            <h4>Ready to check the attendance of your students?</h4>
+            <p>Welcome to the attendance dashboard! Here’s how to use this page:</p>
+            <ul>
+              <li>Click on <strong>Dashboard</strong> to view overall statistics.</li>
+              <li>Navigate to <strong>Halls</strong> to manage specific lecture halls.</li>
+              <li>Use <strong>Register courses</strong> to add or update student enrollments.</li>
+              <li>Review your <strong>Profile</strong> by clicking on your name or image.</li>
+            </ul>
+            <p>Keep track of student attendance with our visual charts and detailed reports.</p>
+          </div>
+          <div class="second-main-two-mobile">
+            <h4>Find out how to check the attendance of your students?</h4>
+            <p>Welcome to the attendance dashboard! Here’s how to use this page:</p>
+            <ul>
+              <li>Click on <strong>Menu bar</strong> and navigate to <strong>Dashboard</strong> to view overall statistics.</li>
+              <li>Navigate to <strong>Halls</strong> to manage specific lecture halls.</li>
+              <li>Use <strong>Register courses</strong> to add or update student enrollments.</li>
+              <li>Review your <strong>Profile</strong> by clicking on your name or image.</li>
+            </ul>
+            <p>Keep track of student attendance with our visual charts and detailed reports.</p>
+          </div>
+        </div>
+      
+      </section>
+      <div class="footerbottom">
+        <p>
+          Copyright &copy;2022; Designed by
+          <span class="designer">CreekTech</span>
+        </p>
+      </div>
+   
+    </div>
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector('nav ul');
+        nav.classList.toggle('show');
+      }
+      document.addEventListener('click', function(event) {
+        const nav = document.querySelector('nav ul');
+        const hamburger = document.querySelector('.hamburger');
+        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+          nav.classList.remove('show');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course registration</title>
+    <link rel="stylesheet" href="../registration/registration.css" />
+  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>C.T.M</h1>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="logo-mobile">
+            <h1>C.T.M</h1>
+          </div>
+        <div class="mobile-icons"> 
+          <a href="../Profile/Profile.html">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <i class="fa-solid fa-bars"></i></div>
+        </div>
+        <ul>
+          <li>
+            <a href="../Lecturer dashboard/Lecturer-dashboard.html" class="link">
+              <i class="fas fa-menorah"></i>
+              <span class="nav-item">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link">
+              <i class="fa-solid fa-landmark"></i>
+              <span class="nav-item">Halls</span>
+            </a>
+          </li>
+         
+          <div class="log-out">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="nav-item">Log Out</span>
+          </div>
+        </ul>
+      </nav>
+    
+
+      <section class="main">        
+        <div class="main-top">
+       <div class="main-top-nav">
+          <div><h4>Attendance</h4></div>
+       <div class="main-top-under"><span><a href="../Lecturer dashboard/Lecturer-dashboard.html">Home</a></span>  </div>
+        </div>
+          <div class="main-top-ex">
+          <a href="../user/Profile.html"><i class="fa-solid fa-user"></i>
+          </a>
+          </div>
+        </div>
+
+
+        <div class="course-form">
+          <h3>Add New Course</h3>
+          <div class="form-group">
+            <label for="course-name">Course Name:</label>
+            <input type="text" id="course-name" name="course-name" required>
+          </div>
+          <div class="form-group">
+            <label for="course-code">Course Code:</label>
+            <input type="text" id="course-code" name="course-code" required>
+          </div>
+          <button type="submit">Enter</button>
+        </div>
+
+<div class="course-information">
+  <div class="users">
+    <div class="notification-circle">3</div>
+    <div class="course-details">
+      <h4>Mathematics</h4>
+      <button><a href="../Courses page/courses.html">View details</a></button>
+      <button>Get Code</button>
+    </div>
+  </div>
+  <div class="users">
+    <div class="notification-circle">5</div>
+    <div class="course-details">
+      <h4>English</h4>
+      <button><a href="../Courses page/courses.html">View details</a></button>
+      <button>Get Code</button>
+    </div>
+  </div>
+  <div class="users">
+    <div class="notification-circle">2</div>
+    <div class="course-details">
+      <h4>Physics</h4>
+      <button><a href="../Courses page/courses.html">View details</a></button>
+      <button>Get Code</button>
+    </div>
+  </div>
+</div>
+
+<div class="course-information">
+  <div class="users">
+    <div class="notification-circle">4</div>
+    <div class="course-details">
+      <h4>Geography</h4>
+      <button><a href="../Courses page/courses.html">View details</a></button>
+      <button>Get Code</button>
+    </div>
+  </div>
+  <div class="users">
+    <div class="notification-circle">6</div>
+    <div class="course-details">
+      <h4>Accounting</h4>
+      <button><a href="../Courses page/courses.html">View details</a></button>
+      <button>Get Code</button>
+    </div>
+  </div>
+  <div class="users">
+    <div class="notification-circle">1</div>
+    <div class="course-details">
+      <h4>Economics</h4>
+      <button><a href="../Courses page/courses.html">View details</a></button>
+      <button>Get Code</button>
+    </div>
+  </div>
+</div>
+
+
+   </div>  
+      </section>
+      <div class="footerbottom">
+        <p>
+          Copyright &copy;2022; Designed by
+          <span class="designer">CreekTech</span>
+        </p>
+      </div>
+ 
+     <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const notificationCircles = document.querySelectorAll(".notification-circle");
+
+  notificationCircles.forEach(circle => {
+    circle.addEventListener("click", function() {
+      let count = parseInt(this.textContent);
+      this.textContent = count + 1;
+    });
+  });
+});
+
+
+      function toggleMenu() {
+        const nav = document.querySelector('nav ul');
+        nav.classList.toggle('show');
+      }
+      document.addEventListener('click', function(event) {
+        const nav = document.querySelector('nav ul');
+        const hamburger = document.querySelector('.hamburger');
+        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+          nav.classList.remove('show');
+        }
+      });
+  
+
+
+     </script>
+
+    
+
+
+  </body>
+</html>
